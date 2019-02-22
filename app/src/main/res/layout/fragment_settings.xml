@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="70dp"
+            android:layout_height="80dp" tools:srcCompat="@tools:sample/avatars[1]"
+            android:id="@+id/myProfileIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toTopOf="@+id/termsAndConditionsIcon"
+            tools:ignore="ContentDescription" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <ImageView
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            tools:srcCompat="@tools:sample/avatars[12]"
+            android:id="@+id/termsAndConditionsIcon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myProfileIcon"
+            app:layout_constraintBottom_toTopOf="@+id/logoutIcon"
+            tools:ignore="ContentDescription" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <ImageView
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            tools:srcCompat="@tools:sample/avatars[14]"
+            android:id="@+id/logoutIcon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/termsAndConditionsIcon"
+            tools:ignore="ContentDescription"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+
+    <TextView
+            android:text="@string/my_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myProfileTextView"
+            app:layout_constraintTop_toTopOf="@id/myProfileIcon"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toBottomOf="@+id/myProfileIcon"
+            app:layout_constraintStart_toEndOf="@+id/myProfileIcon" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/myProfileButton" android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="@string/terms_and_conditions_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/termsAndConditionsTextView"
+            app:layout_constraintTop_toTopOf="@id/termsAndConditionsIcon"
+            app:layout_constraintTop_toBottomOf="@+id/myProfileTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/termsAndConditionsIcon"
+            app:layout_constraintStart_toEndOf="@+id/termsAndConditionsIcon" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/termsAndConditionsButton" android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="@string/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoutTextView"
+            app:layout_constraintTop_toTopOf="@id/logoutIcon"
+            app:layout_constraintBottom_toBottomOf="@id/logoutIcon"
+            app:layout_constraintTop_toBottomOf="@+id/termsAndConditionsTextView"
+            app:layout_constraintStart_toEndOf="@+id/logoutIcon" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/logoutButton" android:layout_marginEnd="8dp"/>
+
+    <Button
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myProfileButton"
+            app:layout_constraintTop_toTopOf="@id/myProfileIcon"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toBottomOf="@+id/myProfileIcon" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
+    <Button
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/termsAndConditionsButton"
+            app:layout_constraintTop_toTopOf="@+id/termsAndConditionsIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/termsAndConditionsIcon" app:layout_constraintStart_toStartOf="@+id/myProfileButton"
+    />
+    <Button
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoutButton"
+            app:layout_constraintBottom_toBottomOf="@id/logoutIcon"
+            app:layout_constraintTop_toBottomOf="@+id/termsAndConditionsButton"
+            app:layout_constraintTop_toTopOf="@+id/logoutIcon"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="@+id/termsAndConditionsButton"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
